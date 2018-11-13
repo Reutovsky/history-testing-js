@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "questionText": "Как зовут человека, изображенного на фотографии?",
+        "answerOne": "Антон",
+        "answerTwo": "Дмитрий",
+        "answerThree": "Сергей",
+        "answerFour": "Иван",
+        "picUrl": "https://24smi.org/public/media/235x307/celebrity/2017/02/16/5QBRax8G5tZY_dmitrii-medvedev.jpg"
+    },
+    {
+        "id": 2,
+        "questionText": "Какого роста был знаменитый баскетболист Майкл Джордан?",
+        "answerOne": "196 см",
+        "answerTwo": "198 см",
+        "answerThree": "200 см",
+        "answerFour": "202 см",
+        "picUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQioYgWwc-8Ym8rH2SIX-NnVHiTIwUBd_UQjEBLgwksnIqv7VY"
+    }
+]
