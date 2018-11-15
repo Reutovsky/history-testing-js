@@ -6,15 +6,28 @@
         "answerTwo": "Дмитрий",
         "answerThree": "Сергей",
         "answerFour": "Иван",
-        "picUrl": "https://icdn.lenta.ru/images/2017/04/19/12/20170419122829564/detail_d6ca6d970798d9cd014cc71a7d6641ed.jpg"
+        "picUrl": "https://icdn.lenta.ru/images/2017/04/19/12/20170419122829564/detail_d6ca6d970798d9cd014cc71a7d6641ed.jpg",
+        "rightAnswer": "answerTwo"
     },
     {
         "id": 2,
         "questionText": "Какого роста был знаменитый баскетболист Майкл Джордан?",
         "answerOne": "196 см",
-        "answerTwo": "198 см",
-        "answerThree": "200 см",
+        "answerTwo": "200 см",
+        "answerThree": "198 см",
         "answerFour": "202 см",
-        "picUrl": "https://24smi.org/public/media/2018/7/3/01-s2zelhp.jpg"
+        "picUrl": "https://24smi.org/public/media/2018/7/3/01-s2zelhp.jpg",
+        "rightAnswer": "answerThree"
+    },
+    {
+        "id": 3,
+        "questionText": "Какой по счету это двойник Путина?",
+        "answerOne": "Первый",
+        "answerTwo": "Второй",
+        "answerThree": "Третий",
+        "answerFour": "Четвертый",
+        "picUrl": "https://cdn4.img.ria.ru/images/150675/61/1506756159.jpg",
+        "rightAnswer": "answerFour"
     }
 ]
+
