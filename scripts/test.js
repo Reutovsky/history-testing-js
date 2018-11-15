@@ -1,30 +1,41 @@
-// document.addEventListener("DOMContentLoaded", getJson);
+const buttonStart = document.getElementById('button__start-test');
+const buttonAnswer = document.getElementById('button__give-answer');
+const testSection = document.getElementsByClassName('test-section')[0];
+const testSectionPic = document.getElementsByClassName('test-section__pic')[0];
+const testSectionQuestion = document.getElementsByClassName('test-section__question')[0];
+let currentQuestion = 0;
 
-function getJson() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../data/testing.json', true);
-    xhr.onload = function() {
-        if(this.status == 200) {
-            var data = JSON.parse(this.responseText);
-            document.getElementById('test-section__pic').style.backgroundImage = `url(${data[0].picUrl})`;
-            document.getElementById('test-section__question').innerHTML = data[0].questionText;
-            // console.log(data[0].answerOne);
-        }
-    }
-    xhr.send();
-}
-
-document.getElementById('button-start').addEventListener("click", startTest);
+buttonStart.addEventListener('click', startTest);
 
 function startTest() {
-
-    
     //  show test-section
-    var testSection = document.getElementById('test-section');
-    testSection.className += " display-flex";
+    testSection.className += ' display-flex';
     //  hide button-start
-    var buttonStart = document.getElementById('button-start');
-    buttonStart.className += " display-none";
-    
+    buttonStart.className += ' display-none';
+    // get JSON & test first time drawing
     getJson();
+}
+
+async function getJson() {
+    // get JSON
+    let response = await fetch('../data/testing.json');
+    let data = await response.json();
+    // pic & question painting
+    testSectionPic.style.backgroundImage = `url(${data[0].picUrl})`;
+    testSectionQuestion.innerHTML = data[0].questionText;
+}
+
+buttonAnswer.addEventListener('click', giveAnswer);
+
+async function giveAnswer() {
+    let response = await fetch('../data/testing.json');
+    let data = await response.json();
+    let dataLength = data.length;
+    if(currentQuestion == dataLength - 1) {
+        alert('THE END OF TEST!');
+    } else {
+        testSectionPic.style.backgroundImage = `url(${data[currentQuestion + 1].picUrl})`;
+        testSectionQuestion.innerHTML = data[currentQuestion + 1].questionText;
+        currentQuestion = currentQuestion + 1;
+    }
 }
