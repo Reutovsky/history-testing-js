@@ -56,11 +56,14 @@ button {
     margin-top: 5px;
 }
 
+
 form {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    flex-flow: column nowrap;
     align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 500pxß;
 }
 
 .result-section {
@@ -73,6 +76,28 @@ form {
     flex-flow: column nowrap;
     align-items: center;
 }
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+  }
+  
+  input[type="radio"]:checked {
+    border: 6px solid black;
+  }
 
 .display-block {
     display: block;
