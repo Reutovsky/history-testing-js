@@ -23,11 +23,11 @@ function startTest() {
     getJson();
 }
 
-async function getJson() {
-    // get JSON
+const getJson = async () => {
+    // get data from JSON
     let response = await fetch('../data/testing.json');
     let data = await response.json();
-    // pic & question painting
+    // pic & question first painting
     testSectionPic.style.backgroundImage = `url(${data[currentQuestion].picUrl})`;
     testSectionQuestion.innerHTML = data[currentQuestion].questionText;
     let output = `
